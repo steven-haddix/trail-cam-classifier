@@ -16,8 +16,11 @@ This will create an `extracted-frames/` directory with the best individual frame
 
 ### 2. Extract & Classify (AI Mode)
 To automatically identify animals using Google Gemini:
-1.  Add your API key to a `.env` file: `GEMINI_API_KEY=your_key_here`
-2.  Run with the `--classify` and `--tile` flags:
+1.  **Get an API Key**: Obtain a free key from [Google AI Studio](https://aistudio.google.com/app/api-keys).
+2.  **Set up Environment**: 
+    - Copy `.env.example` to a new file named `.env`: `cp .env.example .env`
+    - Paste your key into the `.env` file: `GEMINI_API_KEY=your_key_here`
+3.  **Run with AI**: Use the `--classify` and `--tile` flags:
 ```bash
 uv run main.py --tile --classify
 ```
