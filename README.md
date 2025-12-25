@@ -7,7 +7,8 @@ This project uses computer vision to find the sharpest, most interesting frames 
 ## 🚀 How to Use
 
 ### 1. Quick Start (Extraction Only)
-Run the script on your video folder (default: `video-samples/`):
+1. Drop your `.mp4` or `.mov` files into the `video-samples/` directory.
+2. Run the extraction:
 ```bash
 uv run main.py
 ```
@@ -21,6 +22,12 @@ To automatically identify animals using Google Gemini:
 uv run main.py --tile --classify
 ```
 The `--tile` flag creates a 2x2 "hero tile" (4 frames in one image), which allows the AI to see multiple angles of the same event while saving on API tokens.
+
+### 3. Advanced Example (Specific File & Output)
+You can target a single file and specify a custom output directory and frame count:
+```bash
+uv run main.py --tile --classify --per-video 4 --output test-classify --input ./video-samples/DSCF0018.MP4
+```
 
 ---
 

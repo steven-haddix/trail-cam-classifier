@@ -17,4 +17,7 @@ extracted-frames/
 test-output/
 test-classify
 test-tiling
+
+# Video Samples
+video-samples/
 video-samples/**
